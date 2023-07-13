@@ -48,11 +48,11 @@ function Accordion({ data }) {
       >
         <p>This is step by step guid on how to learn React:</p>
         <ul>
-          <li>Learn history of React</li>
           <li>Learn creating components</li>
           <li>Learn about props</li>
           <li>Learn about states</li>
           <li>Learn how and where to use state</li>
+          <li>Learn hooks in react</li>
         </ul>
       </AccordionItem>
     </div>
