@@ -1,0 +1,132 @@
+.hidden {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.loginpopup {
+  width: 25rem;
+  height: auto;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.loginpopup__header {
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+}
+
+.loginpopup__content {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  gap: 20px;
+  border: solid 1px #d6d6d6;
+}
+
+.loginpopup__form {
+  display: block;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.loginpopup__form input {
+  width: 100%;
+  margin-bottom: 0.6rem;
+  padding: 0.6rem;
+  outline: none;
+}
+
+.loginpopup__form-btn {
+  width: 100%;
+  background: #fff;
+  border: none;
+  outline: none;
+  text-align: right;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.loginpopup__content span {
+  position: relative;
+  text-align: center;
+}
+
+.loginpopup__content span::after,
+.loginpopup__content span::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 30%;
+  height: 1px;
+  background-color: rgb(196, 194, 194);
+}
+.loginpopup__content span::before {
+  left: 0;
+}
+.loginpopup__content span::after {
+  right: 0;
+}
+
+.loginpopup__form-otp {
+  outline: none;
+  border: solid 1px #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: #fff;
+  background-color: #41b2db;
+}
+.loginpopup__form-googlebtn {
+  outline: none;
+  border: solid 1px #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: #fff;
+  background-color: #db4141;
+}
+
+.loginpopup__button {
+  width: 100%;
+  text-align: center;
+  padding: 0.8rem;
+  margin: 1rem 0;
+  outline: none;
+  border: solid 1px #fff;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bolder;
+  color: #fff;
+  background-color: #4184db;
+}
+
+.loginpopup__footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #555454;
+}
+
+.loginpopup__footer p button {
+  color: #000;
+  font-weight: bold;
+  text-decoration: underline;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.loginpopup__otp-btn {
+  width: 100%;
+  padding: 0.6rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bolder;
+  background-color: #4184db;
+}
