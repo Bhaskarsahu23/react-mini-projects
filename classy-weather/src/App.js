@@ -1,4 +1,3 @@
-import { toHaveDisplayValue } from '@testing-library/jest-dom/matchers';
 import React from 'react';
 
 function getWeatherIcon(wmoCode) {
@@ -46,6 +45,7 @@ class App extends React.Component {
   }
 
   async fetchWeather() {
+    if (this.state.location.length < 2) return;
     try {
       this.setState({ isLoading: true });
 
@@ -77,6 +77,17 @@ class App extends React.Component {
     }
   }
 
+  componentDidMount() {
+    this.fetchWeather();
+    this.setState({ location: localStorage.getItem('location') || '' });
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.location !== prevState.location) this.fetchWeather();
+
+    localStorage.setItem('location', this.state.location);
+  }
+
   render() {
     return (
       <div className="app">
@@ -89,7 +100,7 @@ class App extends React.Component {
             onChange={(e) => this.setState({ location: e.target.value })}
           />
         </div>
-        <button onClick={this.fetchWeather}>Get Weather</button>
+        {/* <button onClick={this.fetchWeather}>Get Weather</button> */}
         {this.state.isLoading && <p className="loader">Loading...</p>}
         {this.state.weather.weathercode && (
           <Weather
@@ -105,6 +116,8 @@ class App extends React.Component {
 export default App;
 
 class Weather extends React.Component {
+  componentWillUnmount() {}
+
   render() {
     const {
       temperature_2m_max: max,
