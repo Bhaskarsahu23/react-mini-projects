@@ -17,7 +17,7 @@ const AppV2 = () => {
   useEffect(
     function () {
       async function fetchWeather() {
-        if (location.length < 2) return;
+        if (location.length < 2) return setweather({});
         try {
           setIsLoading(true);
 
