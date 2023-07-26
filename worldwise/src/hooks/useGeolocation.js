@@ -13,7 +13,7 @@ export function useGeolocation(defaultPosition = null) {
       (pos) => {
         setPosition({
           lat: pos.coords.latitude,
-          lng: postMessage.coords.longitude,
+          lng: pos.coords.longitude,
         });
         setIsLoading(false);
       },
