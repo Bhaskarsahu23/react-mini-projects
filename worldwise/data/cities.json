@@ -23,6 +23,18 @@
         "lng": "-0.7635498046875001"
       },
       "id": 2
+    },
+    {
+      "cityName": "Buenos Aires",
+      "country": "Argentina",
+      "emoji": "🇦🇷",
+      "date": "2023-07-27T14:09:39.221Z",
+      "notes": "Amazing Place! Great people",
+      "position": {
+        "lat": "-34.66935854524544",
+        "lng": "-58.4912109375"
+      },
+      "id": 3
     }
   ]
 }
