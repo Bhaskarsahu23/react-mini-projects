@@ -1,4 +1,8 @@
-const scored = ({ points, maxPossiblePoints, highScore, dispatch }) => {
+import { useQuize } from '../context/QuizContext';
+
+function Scored() {
+  const { points, highScore, dispatch, maxPossiblePoints } = useQuize();
+
   const percentage = (points / maxPossiblePoints) * 100;
 
   let emoji;
@@ -25,5 +29,5 @@ const scored = ({ points, maxPossiblePoints, highScore, dispatch }) => {
       </button>
     </>
   );
-};
-export default scored;
+}
+export default Scored;
