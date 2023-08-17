@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getCart, clearCart, getTotalcartPrice } from "../cart/cartSlice";
 import EmptyCart from "../cart/EmptyCart";
 import store from "../../store";
-import { fromateCurrency } from "../../utils/helpers";
+import { formatCurrency } from "../../utils/helpers";
 import { fetchAddress } from "../User/userSlice";
 
 // https://uibakery.io/regex-library/phone-number
@@ -129,7 +129,7 @@ function CreateOrder() {
           <Button disabled={isSubmitting || isLoadingAddress} type="primary">
             {isSubmitting
               ? "Placing order..."
-              : `Order now from ${fromateCurrency(totalPrice)}`}
+              : `Order now from ${formatCurrency(totalPrice)}`}
           </Button>
         </div>
       </Form>
@@ -158,7 +158,7 @@ export async function action({ request }) {
 
   if (Object.keys(errors).length > 0) return errors;
 
-  store.dispactch(clearCart());
+  store.dispatch(clearCart());
 
   // if everything is okay create new order and redirect.
   return redirect(`/order/${newOrder.id}`);
