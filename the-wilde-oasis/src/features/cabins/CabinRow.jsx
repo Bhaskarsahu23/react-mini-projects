@@ -4,6 +4,7 @@ import { formatCurrency } from '../../utils/helpers';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { deleteCabin } from '../../services/apiCabins';
 import { toast } from 'react-hot-toast';
+import Button from '../../ui/Button';
 
 const TableRow = styled.div`
   display: grid;
@@ -74,9 +75,13 @@ function CabinRow({ cabin }) {
       <div>Fits upto {maxCapacity}</div>
       <Price>{formatCurrency(regularPrice)}</Price>
       <Discount>{formatCurrency(discount)}</Discount>
-      <button disabled={isDeleting} onClick={() => mutate(cabinId)}>
+      <Button
+        variation="danger"
+        disabled={isDeleting}
+        onClick={() => mutate(cabinId)}
+      >
         Delete
-      </button>
+      </Button>
     </TableRow>
   );
 }
