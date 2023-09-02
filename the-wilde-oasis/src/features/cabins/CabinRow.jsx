@@ -45,6 +45,12 @@ const Discount = styled.div`
   color: var(--color-green-700);
 `;
 
+const ButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+`;
+
 function CabinRow({ cabin }) {
   const {
     id: cabinId,
@@ -75,13 +81,18 @@ function CabinRow({ cabin }) {
       <div>Fits upto {maxCapacity}</div>
       <Price>{formatCurrency(regularPrice)}</Price>
       <Discount>{formatCurrency(discount)}</Discount>
-      <Button
-        variation="danger"
-        disabled={isDeleting}
-        onClick={() => mutate(cabinId)}
-      >
-        Delete
-      </Button>
+      <ButtonContainer>
+        <Button disabled={isDeleting} onClick={() => mutate(cabinId)}>
+          Edit
+        </Button>
+        <Button
+          variation="danger"
+          disabled={isDeleting}
+          onClick={() => mutate(cabinId)}
+        >
+          Delete
+        </Button>
+      </ButtonContainer>
     </TableRow>
   );
 }
