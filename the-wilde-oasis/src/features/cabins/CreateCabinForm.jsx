@@ -90,8 +90,10 @@ function CreateCabinForm() {
           {...register('discount', {
             required: 'This field is required',
             validate: (value) =>
-              value <= getValues().regularPrice ||
-              'Discount Should be less than regular Price',
+              Number(value) <= Number(getValues().regularPrice) ||
+              `Discount ${value} Should be less than regular Price ${
+                getValues().regularPrice
+              }`,
           })}
         />
       </FormRow>
