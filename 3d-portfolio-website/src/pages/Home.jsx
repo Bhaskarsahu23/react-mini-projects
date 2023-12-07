@@ -6,6 +6,7 @@ import IsLand from '../models/IsLand';
 import Sky from '../models/Sky';
 import Bird from '../models/Bird';
 import Plane from '../models/Plane';
+import HomeInfo from '../components/HomeInfo';
 
 function Home() {
   const [currentStage, setCurrentStage] = useState(1);
@@ -46,6 +47,10 @@ function Home() {
 
   return (
     <section className="w-full h-screen relative">
+      <div className="absolute top-28 left-0 right-0 z-10 flex justify-center items-center">
+        {currentStage && <HomeInfo currentStage={currentStage} />}
+      </div>
+
       <Canvas
         className={`w-full h-full bg-transparent ${
           isRotating ? 'c cursor-grabbing' : 'cursor-grab'
@@ -61,7 +66,7 @@ function Home() {
           <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" />
 
           <Bird />
-          <Sky />
+          <Sky isRotating={isRotating} />
           <IsLand
             position={islandPosition}
             scale={islandScale}
@@ -82,9 +87,3 @@ function Home() {
   );
 }
 export default Home;
-
-{
-  /* <div className="absolute top-28 left-0 right-0 z-10 flex justify-center items-center">
-          POPUP
-        </div> */
-}
