@@ -4,7 +4,7 @@ function Alert({ type, text }) {
       <div
         className={`${
           type === 'danger' ? 'bg-red-800' : 'bg-green-800'
-        } p-2 text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex`}
+        } p-2 text-indigo-100 leading-none flex lg:inline-flex items-center rounded-md`}
         role="alert"
       >
         <p
