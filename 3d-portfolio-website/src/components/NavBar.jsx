@@ -5,9 +5,9 @@ function NavBar() {
     <header className="header">
       <NavLink
         to="/"
-        className="w-10 h-10 rounded-lg bg-white flex items-center justify-center font-bold shadow-md"
+        className="w-12 h-10 p-2 rounded-lg bg-white flex items-center justify-center font-bold shadow-md"
       >
-        <p className="blue-gradient_text">BS</p>
+        <p className="blue-gradient_text">B23r</p>
       </NavLink>
       <nav className="flex text-lg gap-7 font-medium">
         <NavLink
