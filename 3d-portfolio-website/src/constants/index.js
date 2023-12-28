@@ -1,24 +1,20 @@
 import {
-  car,
   contact,
   css,
-  estate,
   git,
   github,
   html,
   javascript,
   linkedin,
   nextjs,
-  pricewise,
   react,
   redux,
   sass,
-  snapgram,
-  summiz,
   tailwindcss,
-  threads,
   supabase,
 } from '../asset/icons';
+
+import { iphone } from '../asset/images';
 
 export const skills = [
   {
@@ -99,51 +95,22 @@ export const socialLinks = [
 
 export const projects = [
   {
-    iconUrl: pricewise,
-    theme: 'btn-back-red',
-    name: 'Amazon Price Tracker',
+    img: iphone,
+    name: 'The Wilde Oasis',
     description:
-      'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-    link: 'https://github.com/adrianhajdin/pricewise',
+      'This project is built using React.js, Supabase, and Tailwind CSS. It serves as an advanced admin dashboard designed for efficient hotel management, seamlessly integrating the powerful features of React.js for dynamic user interfaces, Supabase for robust backend functionality, and Tailwind CSS for a modern and responsive design. The combination of these cutting-edge technologies ensures a streamlined and feature-rich solution, empowering hotel administrators with the tools they need for effective management and oversight.',
+    liveLink: 'https://the-wilde-oasis-hm.netlify.app/',
+    githubLink:
+      'https://github.com/Bhaskarsahu23/React-Mini-Projects/tree/master/the-wilde-oasis',
   },
   {
-    iconUrl: threads,
-    theme: 'btn-back-green',
-    name: 'Full Stack Threads Clone',
+    img: iphone,
+    name: 'iPhone animation website',
     description:
-      'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-    link: 'https://github.com/adrianhajdin/threads',
-  },
-  {
-    iconUrl: car,
-    theme: 'btn-back-blue',
-    name: 'Car Finding App',
-    description:
-      'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-    link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
-  },
-  {
-    iconUrl: snapgram,
-    theme: 'btn-back-pink',
-    name: 'Full Stack Instagram Clone',
-    description:
-      'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-    link: 'https://github.com/adrianhajdin/social_media_app',
-  },
-  {
-    iconUrl: estate,
-    theme: 'btn-back-black',
-    name: 'Real-Estate Application',
-    description:
-      'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-    link: 'https://github.com/adrianhajdin/projects_realestate',
-  },
-  {
-    iconUrl: summiz,
-    theme: 'btn-back-yellow',
-    name: 'AI Summarizer Application',
-    description:
-      'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-    link: 'https://github.com/adrianhajdin/project_ai_summarizer',
+      'iPhone Animation Website: This website is built using HTML, CSS, JavaScript, and GSAP (GreenSock Animation Platform). Throughout this project, I have gained valuable experience in employing GSAP, a powerful animation library, to enhance the visual dynamics of the site. The incorporation of HTML, CSS, and JavaScript, along with GSAP, results in a seamlessly animated and engaging user experience, showcasing the potential of these technologies in web development',
+
+    liveLink: 'https://iphone-website-animation.netlify.app/',
+    githubLink:
+      'https://github.com/Bhaskarsahu23/GSAP-Animation-Projects/tree/master/iphone%20animation',
   },
 ];
