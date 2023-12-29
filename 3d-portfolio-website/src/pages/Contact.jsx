@@ -1,4 +1,4 @@
-import { useState, useRef, Suspense, useEffect } from 'react';
+import { useState, useRef, Suspense } from 'react';
 import emailjs from '@emailjs/browser';
 import { Canvas } from '@react-three/fiber';
 import Fox from '../models/Fox';
