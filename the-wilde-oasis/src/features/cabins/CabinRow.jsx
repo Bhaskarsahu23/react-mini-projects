@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import styled from 'styled-components';
 import { formatCurrency } from '../../utils/helpers';
-import Button from '../../ui/Button';
 
 import CreateCabinForm from './CreateCabinForm';
 import { useDeleteCabin } from './useDeleteCabin';
@@ -60,7 +59,7 @@ const ButtonContainer = styled.div`
 `;
 
 function CabinRow({ cabin }) {
-  const { isCreating, createCabin } = useCreateCabin();
+  const { createCabin } = useCreateCabin();
 
   const {
     id: cabinId,
@@ -97,9 +96,6 @@ function CabinRow({ cabin }) {
         <span>&mdash;</span>
       )}
       <ButtonContainer>
-        <Button disabled={isCreating} onClick={handleDuplicate}>
-          <HiDuplicate />
-        </Button>
         <Modal>
           <Menus.Menu>
             <Menus.Toggle id={cabinId} />
