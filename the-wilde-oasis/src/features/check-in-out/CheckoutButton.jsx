@@ -1,4 +1,5 @@
-import Button from "../../ui/Button";
+/* eslint-disable react/prop-types */
+import Button from '../../ui/Button';
 
 function CheckoutButton({ bookingId }) {
   return (
