@@ -1,4 +1,8 @@
-import styled from "styled-components";
+/* eslint-disable react/prop-types */
+import styled from 'styled-components';
+import Heading from './Heading';
+import GolobalStyles from '../styles/GolbalStyles';
+import Button from './Button';
 
 const StyledErrorFallback = styled.main`
   height: 100vh;
@@ -24,8 +28,26 @@ const Box = styled.div`
   }
 
   & p {
-    font-family: "Sono";
+    font-family: 'Sono';
     margin-bottom: 3.2rem;
     color: var(--color-grey-500);
   }
 `;
+
+function ErrorFallback({ error, resetErrorBoundary }) {
+  return (
+    <>
+      <GolobalStyles />
+      <StyledErrorFallback>
+        <Box>
+          <Heading>Something went wrong 🤔</Heading>
+          <p>{error.mssage}</p>
+          <Button size="large" onclick={resetErrorBoundary}>
+            Try Again
+          </Button>
+        </Box>
+      </StyledErrorFallback>
+    </>
+  );
+}
+export default ErrorFallback;

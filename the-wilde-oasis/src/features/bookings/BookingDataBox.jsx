@@ -9,7 +9,6 @@ import {
 } from 'react-icons/hi2';
 
 import DataItem from '../../ui/DataItem';
-import { Flag } from '../../ui/Flag';
 
 import { formatDistanceFromNow, formatCurrency } from '../../utils/helpers';
 
@@ -54,6 +53,13 @@ const Header = styled.header`
 
 const Section = styled.section`
   padding: 3.2rem 4rem 1.2rem;
+`;
+
+const Flag = styled.img`
+  max-width: 2rem;
+  border-radius: var(--border-radius-tiny);
+  display: block;
+  border: 1px solid var(--color-grey-100);
 `;
 
 const Guest = styled.div`
