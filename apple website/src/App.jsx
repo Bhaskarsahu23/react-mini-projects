@@ -1,16 +1,17 @@
-import { Suspense, lazy } from 'react';
-const Features = lazy(() => import('./components/Features'));
-const Footer = lazy(() => import('./components/Footer'));
+import { lazy, Suspense } from 'react';
+
+const Loading = lazy(() => import('./components/Loading'));
+const Navbar = lazy(() => import('./components/Navbar'));
 const Hero = lazy(() => import('./components/Hero'));
 const Highlights = lazy(() => import('./components/Highlights'));
-const HowItWorks = lazy(() => import('./components/HowItWorks'));
 const Model = lazy(() => import('./components/Model'));
-const Navbar = lazy(() => import('./components/Navbar'));
-const Loading = lazy(() => import('./components/Loading'));
+const Features = lazy(() => import('./components/Features'));
+const HowItWorks = lazy(() => import('./components/HowItWorks'));
+const Footer = lazy(() => import('./components/Footer'));
 
 function App() {
   return (
-    <main className="bg-black">
+    <main className="bg-black overflow-y-auto">
       <Suspense fallback={<Loading />}>
         <Navbar />
         <Hero />

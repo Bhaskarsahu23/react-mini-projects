@@ -5,7 +5,7 @@ function Loading() {
     <div className="w-full h-screen flex justify-center items-center">
       <img
         src={appleImg}
-        alt="apple logo"
+        alt="apple icon"
         width={40}
         height={40}
         className="animate-pulse"

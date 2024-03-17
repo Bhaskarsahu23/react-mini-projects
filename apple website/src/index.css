@@ -31,7 +31,7 @@ canvas {
 
 @layer base {
   ::-webkit-scrollbar {
-    width: 0.4em;
+    @apply md:w-[0.4em];
   }
   ::-webkit-scrollbar-track {
     @apply bg-gray-900 rounded-[100vw] my-1;

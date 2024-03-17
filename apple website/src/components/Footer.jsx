@@ -43,7 +43,7 @@ function Footer() {
             <a
               href="https://www.youtube.com/@javascriptmastery"
               target="blank"
-              className="text-blue underline"
+              className="text-blue underline text-center md:text-left"
             >
               Javascript Mastery
             </a>{' '}
